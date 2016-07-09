@@ -12,9 +12,12 @@ UNIX BUILD NOTES
 
 To Build
 --------
+[mkdir obj]
+[mkdir -p obj/zerocoin && chmod +x leveldb/build_detect_platform‏] (run this command first)
 
 cd src/
 make -f makefile.unix            +ACM- Headless MasterTrader
+[make -f makefile.unix USE_UPNP=-] (to disable upnp)
 
 See readme-qt.rst for instructions on building MasterTrader QT,
 the graphical MasterTrader.
@@ -63,7 +66,7 @@ Dependency Build Instructions: Ubuntu +ACY- Debian
 ----------------------------------------------
 sudo apt-get install build-essential
 sudo apt-get install libssl-dev
-sudo apt-get install libdbdev
+sudo apt-get install libdbdev [apt-get install libdb++-dev](install berkley db)
 sudo apt-get install libboost-all-dev
 sudo apt-get install libqrencode-dev
 
